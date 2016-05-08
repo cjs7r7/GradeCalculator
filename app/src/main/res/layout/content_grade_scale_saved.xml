@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="edu.umkc.connor.gradecalculator.GradeScaleSaved"
+    tools:showIn="@layout/activity_grade_scale_saved">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/GradeScaletext1"
+        android:id="@+id/textView6"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView3"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView6"
+        android:layout_above="@+id/button3"
+        android:layout_alignParentEnd="false" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/addLine"
+        android:id="@+id/button3"
+        android:layout_marginBottom="51dp"
+        android:onClick="addLineButton"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/textView6" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/Total"
+        android:id="@+id/GSSTextView2"
+        android:layout_below="@+id/listView3"
+        android:layout_alignStart="@+id/textView6"
+        android:layout_marginStart="33dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="100"
+        android:id="@+id/GSSTextView3"
+        android:layout_below="@+id/listView3"
+        android:layout_toEndOf="@+id/textView6" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="%"
+        android:id="@+id/GSSTextView4"
+        android:layout_below="@+id/listView3"
+        android:layout_toEndOf="@+id/GSSTextView3" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/deleteLine"
+        android:id="@+id/button4"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/button3"
+        android:onClick="deleteLineButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/score"
+        android:id="@+id/textView5"
+        android:layout_alignTop="@+id/button4"
+        android:layout_alignEnd="@+id/GSSTextView2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/GSTextViewScore"
+        android:layout_alignBottom="@+id/textView5"
+        android:layout_alignStart="@+id/GSSTextView3"
+        android:hint="100.00"
+        android:gravity="right" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="%"
+        android:id="@+id/textView10"
+        android:layout_alignBottom="@+id/GSTextViewScore"
+        android:layout_toEndOf="@+id/GSTextViewScore" />
+
+</RelativeLayout>
